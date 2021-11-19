@@ -5,14 +5,24 @@
 </head>
 <body>
   <h1>Currency Exchanger</h1>
-  <!-- <p>Please enter your age and life expectancy to see these figures on different planets! Click submit to see your translated ages and life expectancies.</p>
-  <form id="triangle-checker-form">
-    <label for="age">Enter your age:</label>
-    <input id="age" type="number" min="0">
-    <label for="life-expectancy">Enter your life expectancy:</label>
-    <input id="life-expectancy" type="number" min="0">
-    <button type="submit">Submit</button>
-  </form>
-  <ul id="space-ages"></ul> -->
+  <input type="number" id="input" placeholder="Enter a Number" min="0">
+    <div>
+      <input type="text" id="inputCurrency" placeholder="Enter First Currency">
+    </div>
+    <div>
+      <input type="text" id="outputCurrency" placeholder="Enter Second Currency">
+    </div>
+    <div>
+      <button class="btn btn-warning" id="exchange">Submit</button>
+    </div>
+    <div id="showExchange">
+      <p>Here's your conversion:</p> 
+    </div>
+    <div class="container">  
+      <div id="showConversion">
+        <h3><span id="inputSpan"></span> <span id="inputCurrencySpan"></span> is equivalent to <span id="outputSpan"></span> <span id="outputCurrencySpan"></span></h3>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
