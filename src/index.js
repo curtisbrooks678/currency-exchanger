@@ -25,8 +25,10 @@ $(document).ready(function() {
           outputRate = `${body.conversion_rates[code2]}`;
         }
       }
+      
       output = (inputRate / outputRate) * input;
       output = Math.round(output * 10000) / 10000;
+
       $('#showExchange').show();
       $('#showConversion').show();
       $('#inputSpan').text(input);
