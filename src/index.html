@@ -13,16 +13,16 @@
       <input type="text" id="outputCurrency" placeholder="Enter Second Currency">
     </div>
     <div>
-      <button class="btn btn-warning" id="exchange">Submit</button>
+      <button class="btn btn-warning" id="exchange">Convert!</button>
     </div>
-    <div id="showExchange">
+    <div id="showConversion">
       <p>Here's your conversion:</p> 
+      <h3><span id="inputSpan"></span> <span id="inputCurrencySpan"></span> is equivalent to <span id="outputSpan"></span> <span id="outputCurrencySpan"></span></h3>
     </div>
-    <div class="container">  
-      <div id="showConversion">
-        <h3><span id="inputSpan"></span> <span id="inputCurrencySpan"></span> is equivalent to <span id="outputSpan"></span> <span id="outputCurrencySpan"></span></h3>
-      </div>
-    </div>
+    
+    <div id="currencyErrors1"></div>
+    <div id="currencyErrors2"></div>
+    <div id="showErrors"></div>
   </div>
 </body>
 </html>

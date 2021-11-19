@@ -1,3 +1,13 @@
 body {
   background-color: lightblue;
+  text-align: center;
 }
+
+#showConversion {
+  display: none;
+}
+
+#currencyErrors {
+  display: none;
+}
+
