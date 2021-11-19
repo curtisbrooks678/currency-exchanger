@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import Currency from './currency.js'
+import Currency from './currency.js';
 
 $(document).ready(function() {
   let promise = Currency.getCurrency();
@@ -12,20 +12,20 @@ $(document).ready(function() {
       const input = $('#input').val();
       const inputCurrency = $('#inputCurrency').val();
       const outputCurrency = $('#outputCurrency').val();
-      let inputPrice = '';
-      let outputPrice = '';
+      let inputRate = '';
+      let outputRate = '';
       let output = '';
-      // for(const property in body.conversion_rates) {
-      //   if(inputCurrency === `${body[i].name}`) {
-      //     inputPrice = `${body[i].price}`;
-      //   }
-      // }
-      // for(let i=0; i<body2.length; i++) {
-      //   if(outputCurrency === `${body[i].name}`) {
-      //     outputPrice = `${body[i].price}`;
-      //   }
-      // }
-      output = (inputPrice / outputPrice) * input;
+      for(const code in body.conversion_rates) {
+        if (`${code}` === inputCurrency) {
+          inputRate = `${body.conversion_rates[code]}`;
+        }
+      }
+      for(const code2 in body.conversion_rates) {
+        if (`${code2}` === outputCurrency){
+          outputRate = `${body.conversion_rates[code2]}`;
+        }
+      }
+      output = (inputRate / outputRate) * input;
       output = Math.round(output * 10000) / 10000;
       $('#showExchange').show();
       $('#showConversion').show();
