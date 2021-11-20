@@ -17,8 +17,8 @@ $(document).ready(function() {
     promise.then(function(response) {
       const body = JSON.parse(response);
       const input = $('#input').val();
-      const inputCurrency = $('#inputCurrency').val();
-      const outputCurrency = $('#outputCurrency').val();
+      const inputCurrency = ($('#inputCurrency').val()).toUpperCase();
+      const outputCurrency = ($('#outputCurrency').val()).toUpperCase();
       let inputRate = '';
       let outputRate = '';
       let output = '';
@@ -34,7 +34,7 @@ $(document).ready(function() {
         } 
         if (counter1 === 160) {
           $('#showConversion').hide();
-          $('#currencyErrors1').text("Your first currency code is entered incorrectly. Please enter a valid currency code from the list below.");
+          $('#currencyErrors1').text("Your first currency code is entered incorrectly or is not a valid currency code for this application. Please enter a valid currency code from the list below.");
         }
       }
 
@@ -48,7 +48,7 @@ $(document).ready(function() {
         } 
         if (counter2 === 160) {
           $('#showConversion').hide();
-          $('#currencyErrors2').text("Your second currency code is entered incorrectly. Please enter a valid currency code from the list below.");
+          $('#currencyErrors2').text("Your second currency code is entered incorrectly or is not a valid currency code for this application. Please enter a valid currency code from the list below.");
         }
       }
       
