@@ -53,7 +53,7 @@ $(document).ready(function() {
       }
       
       if (counter1 < 160 && counter2 < 160) {
-        output = (inputRate / outputRate) * input;
+        output = (outputRate / inputRate) * input;
         output = Math.round(output * 10000) / 10000;
         $('#showConversion').show();
         $('#inputSpan').text(input);
